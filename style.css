@@ -1,0 +1,274 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(100% - 32px, 900px);
+    margin: auto;
+
+.header {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 45px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.3rem;
+    margin-bottom: 8px;
+}
+
+.header p {
+    opacity: 0.9;
+}
+
+main {
+    padding: 35px 0;
+}
+
+.poll-card,
+.results-card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.poll-header {
+    margin-bottom: 25px;
+}
+
+.poll-header h2,
+.results-header h2 {
+    font-size: 1.7rem;
+    margin-top: 10px;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+.badge {
+    display: inline-block;
+    background: #ede9fe;
+    color: #5b21b6;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+.results-badge {
+    background: #dcfce7;
+    color: #166534;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-weight: 600;
+}
+
+.option:hover {
+    border-color: #6366f1;
+    background: #f5f3ff;
+    transform: translateY(-2px);
+}
+
+.option input {
+    width: 18px;
+    height: 18px;
+    accent-color: #4f46e5;
+}
+
+.message {
+    min-height: 25px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.message.error {
+    color: #dc2626;
+}
+
+.message.success {
+    color: #16a34a;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 22px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.vote-button {
+    background: #4f46e5;
+    color: white;
+}
+
+.vote-button:hover {
+    background: #3730a3;
+    transform: translateY(-2px);
+}
+
+.reset-button {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.reset-button:hover {
+    background: #e5e7eb;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.total-votes {
+    text-align: center;
+    background: #f3f4f6;
+    padding: 10px 18px;
+    border-radius: 12px;
+}
+
+.total-votes span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+.total-votes small {
+    color: #6b7280;
+}
+
+.result-item {
+    margin-bottom: 22px;
+}
+
+.result-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.result-name {
+    font-weight: bold;
+}
+
+.result-percentage {
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+.progress-background {
+    width: 100%;
+    height: 14px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    border-radius: 20px;
+    transition: width 0.6s ease;
+}
+
+.result-votes {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 35px 0;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .poll-card,
+    .results-card {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .results-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}

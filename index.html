@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>poll-voting app</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>📊 Quick Poll</h1>
+            <p>Vote for your favorite programming language</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+    
+        <section class="poll-card">
+
+            <div class="poll-header">
+                <span class="badge">LIVE POLL</span>
+                <h2 id="question">What is your favorite programming language?</h2>
+                <p class="subtitle">Choose one option and submit your vote.</p>
+            </div>
+
+            
+            <form id="pollForm">
+
+                <fieldset>
+                    <legend>Select an option</legend>
+
+                    <div class="options-grid">
+
+                        <label class="option">
+                            <input type="radio" name="vote" value="JavaScript">
+                            <span>JavaScript</span>
+                        </label>
+
+                        <label class="option">
+                            <input type="radio" name="vote" value="Python">
+                            <span>Python</span>
+                        </label>
+
+                        <label class="option">
+                            <input type="radio" name="vote" value="Java">
+                            <span>Java</span>
+                        </label>
+
+                        <label class="option">
+                            <input type="radio" name="vote" value="HTML">
+                            <span>HTML</span>
+                        </label>
+
+                    </div>
+                </fieldset>
+
+                <p id="message" class="message"></p>
+
+                <div class="button-group">
+                    <button type="submit" class="vote-button">
+                        Submit Vote
+                    </button>
+
+                    <button type="button" id="resetButton" class="reset-button">
+                        Reset Poll
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+
+        
+        <section class="results-card">
+
+            <div class="results-header">
+                <div>
+                    <span class="badge results-badge">RESULTS</span>
+                    <h2>Poll Results</h2>
+                </div>
+
+                <div class="total-votes">
+                    <span id="totalVotes">0</span>
+                    <small>Total Votes</small>
+                </div>
+            </div>
+
+            <div id="resultsContainer" class="results-container">
+
+                
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Quick Poll | Poll & Voting App</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
